@@ -1,4 +1,6 @@
-# Redo - Feedback on assessments that students actually use
+# Redo
+
+*Feedback on assessments that students actually use*
 
 Documentation repository for the UX project of **group 5**. The project aims to turn the feedback on an assessment into a concrete correction in the next submission, and to let students check their progress by rubric criterion.
 
@@ -64,7 +66,7 @@ The profiles are written in English and share a structure of personal informatio
 
 The canvas relates the student's jobs, frustrations and expected gains to the features and mechanisms proposed to make feedback easier to use.
 
-![Value Proposition Canvas of the assessment feedback project](value_proposition.png)
+![Value Proposition Canvas of the assessment feedback project](images/value_proposition.png)
 
 [View the original canvas PDF](docs/value-proposition-canvas.pdf).
 
@@ -83,7 +85,7 @@ The link between criterion and corrective action answers the problem directly. F
 
 A single board with four quadrants (Increase, Include, Reduce, Remove) that compares how seven tools show results and feedback to a student today. Each card shows its source product and the persona it answers to.
 
-![Benchmarking of feedback tools for students](benchmarking.png)
+![Benchmarking of feedback tools for students](images/benchmarking.png)
 
 [View the benchmarking PDF](docs/benchmarking.pdf).
 
@@ -103,7 +105,7 @@ The features of each tool were checked in its official documentation. No institu
 
 A single general journey, not one per persona, in six stages: receive the result, find the feedback, understand it, revise, submit and check progress. It includes scenario, expectations, actions, touchpoints, instructor actions, thoughts, emotional curve, pain points and opportunities. It starts from Valentina Rojas and Samon Baker as primary users and Martina Soto as the secondary user.
 
-![Customer Journey Map of the project](customer-journey-map.png)
+![Customer Journey Map of the project](images/customer-journey-map.png)
 
 [View the customer journey map PDF](docs/customer-journey-map.pdf).
 
@@ -200,9 +202,10 @@ The next steps are to validate the needs of the three profiles with students and
 │   ├── 1.png
 │   ├── 2.png
 │   └── 3.png
-├── value_proposition.png
-├── benchmarking.png
-└── customer-journey-map.png
+└── images/
+    ├── value_proposition.png
+    ├── benchmarking.png
+    └── customer-journey-map.png
 ```
 
 The documentation is in English, except the project brief and the Value Proposition Canvas, which keep the content and language of the delivered files. The next iteration of the canvas should consider the three current profiles.
