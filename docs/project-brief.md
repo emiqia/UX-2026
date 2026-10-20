@@ -1,54 +1,54 @@
-# Contexto del proyecto
+# Project Context
 
-## Grupo 5
+## Group 5
 
-Cristian Sandova, Emilia Toro y Bastian Wenckhans.
+Cristian Sandoval, Emilia Toro, and Bastian Wenckhans.
 
-## Desafío seleccionado
+## Selected Challenge
 
-**Retroalimentación de evaluaciones que el estudiante efectivamente utilice.**
+**Assessment feedback that students actually use.**
 
-La retroalimentación de trabajos y rúbricas llega tarde y dispersa entre comentarios en PDF, planillas y correos, de modo que rara vez se traduce en una corrección concreta en la entrega siguiente. El desafío consiste en cerrar el ciclo: que el estudiante identifique qué criterio falló, qué acción concreta lo corrige y si mejoró respecto de la entrega anterior. La superficie funcional es pequeña, por lo que toda la dificultad está en la claridad y en demostrar con evidencia que la retroalimentación se usó.
+Feedback on assignments and rubrics arrives late and scattered across PDF comments, spreadsheets, and emails, so it rarely translates into a concrete correction in the next submission. The challenge consists of closing the loop: having the student identify which criterion failed, what concrete action corrects it, and whether there was an improvement compared to the previous submission. The functional surface is small, so the entire difficulty lies in clarity and demonstrating with evidence that the feedback was used.
 
-> Como estudiante que obtuvo una nota baja en la primera entrega, necesito ver exactamente qué criterio falló y qué debo hacer distinto en la próxima, para no repetir el mismo error sin darme cuenta.
+> As a student who received a low grade on the first submission, I need to see exactly which criterion failed and what I should do differently next time, so that I do not repeat the same mistake without noticing.
 
-## Público principal
+## Primary Audience
 
-Estudiantes que reciben una evaluación y deben utilizar sus comentarios en una siguiente entrega relacionada. Los perfiles preliminares representan a Valentina Rojas, estudiante de ingeniería informática de la Universidad de La Frontera, y Samon Baker, estudiante de diseño gráfico de INACAP y practicante.
+Students who receive an evaluation and must utilize its feedback in a related subsequent submission. The preliminary profiles represent Valentina Rojas, a computer engineering student at Universidad de La Frontera, and Samon Baker, a graphic design student at INACAP and intern.
 
-## Público secundario
+## Secondary Audience
 
-Martina Soto representa a una docente universitaria del área de educación en la Universidad Católica de Temuco. Su relación con la solución consiste en formular comentarios asociados a criterios y acciones, y verificar las correcciones en una entrega posterior.
+Martina Soto represents a university instructor in the education field at Universidad Católica de Temuco. Her relationship with the solution consists of formulating comments associated with criteria and actions, and verifying corrections in a subsequent submission.
 
-Los tres perfiles se sitúan en Temuco. Las instituciones y sus características constituyen escenarios de diseño por validar; no corresponden a usuarios investigados ni acuerdos con dichas instituciones.
+The three profiles are situated in Temuco. The institutions and their characteristics constitute design scenarios to be validated; they do not correspond to investigated users nor formal agreements with said institutions.
 
-## Problema de diseño
+## Design Problem
 
-La disponibilidad de una nota o de un comentario no garantiza que el estudiante entienda el criterio, sepa cómo corregirlo o incorpore el cambio. La experiencia debe mantener visible la relación entre evaluación, acción y evidencia.
+The availability of a grade or a comment does not guarantee that the student understands the criterion, knows how to correct it, or incorporates the change. The experience must keep visible the relationship between evaluation, action, and evidence.
 
-## Alcance inicial propuesto
+## Initial Proposed Scope
 
-- Una asignatura y dos entregas relacionadas.
-- Criterios de evaluación asociados a comentarios y resultados.
-- Acciones de mejora comprensibles y específicas.
-- Evidencia de aplicación en el trabajo posterior.
-- Comparación del mismo criterio cuando exista equivalencia entre rúbricas.
+- One course and two related submissions.
+- Evaluation criteria associated with comments and results.
+- Understandable and specific improvement actions.
+- Evidence of application in subsequent work.
+- Comparison of the same criterion when equivalence exists between rubrics.
 
-La agenda académica general puede evaluarse después de validar este recorrido principal.
+The general academic agenda can be evaluated after validating this primary journey.
 
-## Restricciones y preguntas por resolver
+## Constraints and Open Questions
 
-- ¿Cuándo reciben los estudiantes los comentarios respecto de la próxima fecha de entrega?
-- ¿Qué información contienen actualmente las rúbricas y en qué formatos se entrega?
-- ¿Quién redacta o confirma la acción correctiva? La propuesta no debe alterar el significado del comentario docente.
-- ¿Qué evidencia permitirá comprobar que el cambio se aplicó?
-- ¿Qué hacer si la siguiente entrega usa criterios diferentes?
-- ¿Cuánto esfuerzo adicional supone registrar una corrección para estudiantes y docentes?
+- When do students receive comments relative to the next submission deadline?
+- What information do rubrics currently contain and in what formats are they delivered?
+- Who writes or confirms the corrective action? The proposal must not alter the meaning of the instructor's comment.
+- What evidence will allow verification that the change was applied?
+- What should be done if the next submission uses different criteria?
+- How much additional effort does recording a correction impose on students and instructors?
 
-Centralizar información no adelanta por sí mismo la evaluación docente. Para abordar la tardanza se necesita comprender también el proceso de entrega de comentarios.
+Centralizing information does not in itself expedite instructor evaluation. To address delays, the feedback delivery process must also be understood.
 
-## Artefactos y estado
+## Artifacts and Status
 
-Se dispone de tres perfiles distintos en inglés: dos estudiantes de áreas e instituciones diferentes y una docente como usuaria secundaria. Las fichas incluyen fotografías y muestran solo el nombre sobre la imagen. También se dispone del Value Proposition Canvas entregado originalmente, pendiente de alineación con los tres perfiles. La investigación, el prototipo y las pruebas de uso no están documentados en los materiales compartidos.
+Three distinct profiles are available in English: two students from different fields and institutions, and one instructor as a secondary user. The profile sheets include photographs and display only the name over the image. The originally delivered Value Proposition Canvas is also available, pending alignment with the three profiles. Research, prototype, and usability testing are not documented in the shared materials.
 
-Ver el [README](../README.md) para consultar las imágenes, los perfiles actuales y los próximos pasos del proyecto.
+See the [README](../README.md) to review images, current profiles, and next steps for the project.
