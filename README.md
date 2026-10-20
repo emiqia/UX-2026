@@ -84,23 +84,28 @@ The link between criterion and corrective action answers the problem directly. F
 
 ### 3. Benchmarking
 
-A single board with four quadrants (Increase, Include, Reduce, Remove) that compares how seven tools show results and feedback to a student today. Each card shows its source product and the persona it answers to.
+A comprehensive exploratory and competitive UX benchmark adapted from the *Fructus Iter* methodology, designed to evaluate how educational and collaborative platforms manage the feedback-to-remediation loop.
+
+The benchmark integrates four methodological components demanded by the course rubric:
+1. **Initial Exploration Protocol (*Pauta de Exploración*):** Standardized protocol evaluating 4 user tasks under Valentina's shared scenario (receiving 1/4 on a rubric criterion, formulating actions, binding evidence, and instructor verification).
+2. **Annotated Interface Teardowns (*Capturas Anotadas*):** Detailed teardowns with positive `[+]` and negative `[-]` callouts analyzing direct competitors (Moodle, Canvas LMS, Google Classroom) and collaborative tools (Trello, GitHub PRs, Figma).
+3. **Synthetic Comparison & ERIC Matrix:** Qualitative comparison of feature support alongside an Opportunity Matrix (*Eliminate, Reduce, Raise, Create*).
+4. **Ideation & Concept Map (*Mapa de Ideas*):** Architectural diagram connecting competitor patterns to LoopFeedback's 4 core modules (*Interactive Rubric Breakdown*, *Prescriptive Action Cards*, *Evidence-Binding Module*, and *Instructor Verification Queue*).
+
+* **Full Report:** [View the Comprehensive 9-page UX Benchmarking Report PDF](docs/benchmarking-report.pdf).
+* **Synthesis Board:** [View the original Benchmarking Board PDF](docs/Benchmarking.pdf).
 
 ![Benchmarking of feedback tools for students](images/benchmarking.png)
 
-[View the benchmarking PDF](docs/benchmarking.pdf).
-
-| Tool | Contribution to the comparison |
-| --- | --- |
-| Intranet UFRO | Observed by the team. It shows grades, like the Campus Virtual. There is no public documentation, so no features are cited. |
-| Moodle (Campus Virtual UFRO) | Rubric with criteria and levels, comment per criterion and rubric preview. |
-| Canvas | Rubric results by criterion and a learning mastery view. |
-| Google Classroom | Rubric level highlighted in the returned assignment. |
-| Microsoft Teams (Assignments) | Return for revision with a "Needs revision" status and an overall feedback box. |
-| GitHub (pull requests) | Comments on specific lines, resolved conversations and re-requested review. |
-| Figma (comments) | Pinned comments, resolving and version history. |
-
-The features of each tool were checked in its official documentation. No institutional accounts were tested and no usability was measured, so the decisions are design inferences.
+| Tool | Category | Key Finding & Contribution to Design |
+| --- | --- | --- |
+| Moodle (Campus Virtual UFRO) | Direct Competitor | Clear rubric level highlighting, but comments are trapped inside small cells and resubmissions overwrite past history. |
+| Canvas LMS | Direct Competitor | Criterion-level remarks via SpeedGrader, but lacks student-driven evidence binding and cross-submission comparison. |
+| Google Classroom | Direct Competitor | Clean expandable score chips, but private feedback is separated from specific rubric criteria. |
+| Trello | Analogous Reference | Strong mental model for checkable action cards and file attachments; adopted for our prescriptive action cards. |
+| GitHub (Pull Requests) | Analogous Reference | Line-by-line granular critique and re-requesting review; inspires our bidirectional evidence binding. |
+| Figma (Comments) | Analogous Reference | In-situ pinned feedback and version comparison history. |
+| Intranet UFRO | Baseline Reference | Static grade display with no rubric or formative remediation mechanism. |
 
 ### 4. Customer Journey Map
 
@@ -179,7 +184,7 @@ The proposal is to test the prototype with engineering and design students who h
 | Initial definition of the problem and the user story | Available. |
 | UX personas | Three validated empirical profiles grounded in qualitative fieldwork interviews. |
 | Value Proposition Canvas | Available. Scope needs prioritization. |
-| Benchmarking | Available. Based on official documentation and team use, with no user testing. |
+| Benchmarking | Completed. Full 9-page benchmark including exploration protocol, annotated teardowns, comparison matrix, ERIC matrix, and concept map (docs/benchmarking-report.pdf). |
 | Customer Journey Map | Available. General journey based on the personas, validation pending. |
 | Research with students and instructors | Completed. Semi-structured interviews conducted with students and instructors; evidence attached in docs. |
 | Flow and prototype design | Proposed. No prototypes attached. |
@@ -198,6 +203,7 @@ The next steps are to adjust the canvas to the feedback loop, contrast the journ
 │   ├── user-research-interviews.pdf
 │   ├── user-personas.pdf
 │   ├── value-proposition-canvas.pdf
+│   ├── benchmarking-report.pdf
 │   ├── benchmarking.pdf
 │   └── customer-journey-map.pdf
 ├── ux-personas/
