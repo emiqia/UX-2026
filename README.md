@@ -30,6 +30,20 @@ The value proposition is to help students turn the comments of an assessment int
 
 The [project brief](docs/project-brief.md) develops the problem, the proposed scope and the questions to validate with users.
 
+## UX Elements Architecture (Jesse James Garrett)
+
+To ensure academic and methodological rigor, each UX Research and design technique in the project is anchored to one of the five planes of Jesse James Garrett's *The Elements of User Experience*:
+
+| UX Element Plane | Research & Design Techniques | Associated Project Deliverables | Grounding & Objectives |
+| :--- | :--- | :--- | :--- |
+| **1. Strategy** *(Estrategia)* | Semi-structured interviews ($N=3$), qualitative thematic analysis, Persona modeling, Value Proposition Canvas. | [Research Report](docs/user-research-interviews.pdf), [UX Personas](docs/user-personas.pdf), [Value Canvas](docs/value-proposition-canvas-full.pdf), [Brief](docs/project-brief.md) | Identifies breakdowns in feedback comprehension and establishes core value proposition: closing the loop with evidence. |
+| **2. Scope** *(Alcance)* | Competitive & analogous benchmarking, ERIC matrix, requirements prioritization, boundary definition. | [Benchmarking Report](docs/benchmarking-report.pdf), [Scope & UX Elements](docs/scope-and-ux-elements.pdf) | Constrains solution to 1 core flow and 2 secondary flows; establishes explicit justification for out-of-scope features. |
+| **3. Structure** *(Estructura)* | Customer Journey Mapping, navigation flow diagrams, information architecture. | [Customer Journey Map](docs/Customer-Journey-Map.pdf), Navigation Flow Diagram, CJM-Interface Mapping | Structures transitions from receiving feedback to submitting evidence; binds journey stages to interface IDs (UI-01 to UI-07). |
+| **4. Skeleton** *(Esqueleto)* | Paper Low-Fi sketching, interface evolution tracking, wireframing. | Low-Fi Paper Sketches, UI Evolution Log | Determines screen layout, hierarchy, and physical interaction controls (designed by Cristián). |
+| **5. Surface** *(Superficie)* | High-Definition UI prototyping, design system, accessibility audit. | Figma HD Prototype, Classroom Printouts | Final sensory presentation in Spanish with accessible color tokens and consistent typography. |
+
+*Detailed Document:* [View the Scope Delimitation, UX Elements & CJM Mapping PDF](docs/scope-and-ux-elements.pdf).
+
 ## Completed activities
 
 ### 1. UX personas
@@ -111,29 +125,56 @@ A single general journey, not one per persona, in six stages: receive the result
 
 ![Customer Journey Map of the project](images/customer-journey-map.png)
 
-[View the customer journey map PDF](docs/customer-journey-map.pdf).
+* [View the Customer Journey Map PDF](docs/Customer-Journey-Map.pdf).
+* [View the CJM & Interfaces Architecture Document](docs/scope-and-ux-elements.pdf).
 
-The thoughts and emotions are an example case built from the personas and must be validated with users.
+#### Customer Journey Map to Interface Mapping
 
-## Proposed functional scope
+To ensure direct traceability between user fieldwork and interface screens, each CJM stage is formally bound to a specific interface designed by the team:
 
-These functions describe the design direction for a prototype. Their implementation and validation are pending.
+| CJM Stage | User Action (Valentina / Samon) | Emotional State | Interface ID | Screen Name & Core Interaction |
+| :--- | :--- | :--- | :---: | :--- |
+| **01 Receive** | Opens assessment result on the platform. | Concerned / Anxious | **UI-01** | **Assessment Overview Dashboard:** Summary card displaying total grade, delivery date, and color-coded status badges for all criteria. |
+| **02 Find** | Locates rubric and identifies penalized criterion. | Reassured / Focused | **UI-02** | **Rubric Breakdown & Criterion Inspector:** Expandable rubric grid highlighting achieved level, points lost, and teacher comments. |
+| **03 Understand** | Reads explanation and identifies concrete fix. | Confident | **UI-03** | **Prescriptive Action Card Drawer:** Dedicated card displaying instructor-approved tasks, prescriptive examples, and success conditions. |
+| **04 Revise** | Updates deliverable and attaches revision evidence. | In control | **UI-04** | **Evidence-Binding Modal:** Upload/input modal where student anchors text snippets, screenshots, or URLs directly to the action card. |
+| **05 Submit** | Sends correction with linked proof for teacher review. | Hopeful | **UI-05** | **Submission Confirmation & Status Tracker:** Moves action status from `Pending` to `Evidence Submitted`, awaiting instructor review. |
+| **06 Compare** | Reviews subsequent submission to verify improvement. | Encouraged | **UI-06** | **Longitudinal Criterion Comparison View:** Side-by-side historical comparison of the same criterion between Deliverable 1 and 2. |
+| *Evaluator Flow* | Reviews student evidence and validates correction. | Relieved / Efficient | **UI-07** | **Instructor Verification Queue:** Split inspection view allowing 1-click approval or re-prompting without manual document search. |
 
-1. **Assessment review:** see criteria, the level or score obtained and the associated comment.
-2. **Improvement action:** understand what to change, why, and how to recognize that the correction is done.
-3. **Application record:** link the action to a specific fragment, section or change in the next submission.
-4. **Comparison across submissions:** review the result of the same criterion when the rubrics are comparable.
+## Delimitation of Scope (Delimitación del Alcance)
 
-The initial experience can focus on one course and two related submissions. The instructor acts as a secondary user: she links comments to criteria and actions, and reviews the evidence provided by the student. Notifications can help students learn that comments are available, but they do not show that the comments were understood or applied.
+In strict accordance with the project guidelines, functional exhaustiveness is avoided. The proposal is formally bounded to **one core flow** and **two secondary flows**, with an explicit written justification of capabilities left out of scope to avoid penalization.
 
-## Proposed main flow
+### 1. Core Flow (Flujo Principal): Feedback-to-Remediation Loop
+* **Actor:** Student (Valentina Rojas / Samon Baker).
+* **Sequential Interaction Steps:**
+  1. **Identify Weakness (`UI-01` & `UI-02`):** Student inspects returned deliverable and isolates a penalized criterion ($1/4$ points) along with the instructor's observation.
+  2. **Access Prescriptive Guidance (`UI-03`):** Student opens the associated Action Card to review the concrete, instructor-approved remediation guideline (*"What to do"*, *"Example"*, *"Success condition"*).
+  3. **Anchor & Submit Evidence (`UI-04` & `UI-05`):** Student uploads and binds proof of correction (revised paragraph, code link, or annotated design) and submits it, updating status from `Pending Revision` to `Evidence Submitted`.
 
-1. The student opens the feedback on the first submission.
-2. They identify a criterion that did not reach the expected level.
-3. They review an explanation and a concrete improvement action linked to that criterion.
-4. They apply the action in the next submission and record where the change was made.
-5. The instructor reviews the change linked to the action and evaluates the new submission.
-6. The student compares the result for that criterion with the previous submission, when the rubrics are equivalent.
+### 2. Secondary Flow 1: Instructor Verification & Status Approval
+* **Actor:** Course Instructor / Evaluator (Martina Soto).
+* **Sequential Interaction Steps:**
+  1. **Review Verification Queue (`UI-07`):** Instructor opens pending student remediation submissions.
+  2. **Side-by-Side Inspection:** System displays the original rubric critique alongside the student's linked evidence.
+  3. **1-Click Status Update:** Instructor approves the correction or requests further clarification without reading entire 40-page reports.
+
+### 3. Secondary Flow 2: Longitudinal Criterion Comparison
+* **Actor:** Student (Valentina/Samon) and Instructor (Martina).
+* **Sequential Interaction Steps:**
+  1. **Select Deliverables (`UI-06`):** User chooses comparable Milestone 1 and Milestone 2 submissions.
+  2. **Inspect Evolution:** System displays side-by-side performance on the same rubric criterion to verify measurable academic growth.
+
+### 4. Explicit Justification of Out-of-Scope Features (Qué queda fuera y por qué)
+
+| Out-of-Scope Feature | Scope Decision | Pedagogical & UX Justification |
+| :--- | :---: | :--- |
+| **General Academic Timetables & Class Schedules** | Excluded | The initiative focuses exclusively on the formative evaluation loop. Campus scheduling creates interface noise and deviates from the core usability problem. |
+| **Comprehensive Gradebook & Final GPA Calculator** | Excluded | Institutional platforms (UFRO Intranet) already calculate weighted averages. Duplicating gradebooks shifts focus away from criterion-level understanding. |
+| **Unstructured Chat / Direct Messaging Channel** | Excluded | Fieldwork revealed open messaging threads cause evaluator fatigue and scatter feedback. Communication must remain strictly anchored to Action Cards and Evidence Attachments. |
+| **Automated AI Grading / Generative Auto-Scoring** | Excluded | Course regulations mandate that Milestone 1 proves human UX design and research. AI grading is prohibited in Hito 1 (and will be explored under Human-in-the-Loop guidelines in Hito 2). |
+| **Multi-Institution Account Synchronization** | Excluded | The prototype assumes a single course environment ($1$ course, $2$ related deliverables) to validate interaction mechanics before tackling institutional API interoperability. |
 
 ### Illustrative example
 
@@ -180,16 +221,18 @@ The proposal is to test the prototype with engineering and design students who h
 | Activity | Status |
 | --- | --- |
 | Initial definition of the problem and the user story | Available. |
+| UX Elements Architecture | Completed. 5 planes of Jesse James Garrett documented with techniques and deliverables (docs/scope-and-ux-elements.pdf). |
 | UX personas | Three validated empirical profiles grounded in qualitative fieldwork interviews. |
 | Value Proposition Canvas | Completed. Calibrated for all three personas (Valentina, Samon, Martina) and focused on feedback loop without auxiliary clutter (docs/value-proposition-canvas-full.pdf). |
 | Benchmarking | Completed. Full 9-page benchmark including exploration protocol, annotated teardowns, comparison matrix, ERIC matrix, and concept map (docs/benchmarking-report.pdf). |
-| Customer Journey Map | Available. General journey based on the personas, validation pending. |
+| Customer Journey Map & UI Mapping | Completed. 6 stages formally mapped to interface IDs UI-01 through UI-07 (docs/scope-and-ux-elements.pdf). |
+| Delimitation of Scope | Completed. 1 core flow, 2 secondary flows, and justified out-of-scope rationale table (docs/scope-and-ux-elements.pdf). |
 | Research with students and instructors | Completed. Semi-structured interviews conducted with students and instructors; evidence attached in docs. |
-| Flow and prototype design | Proposed. No prototypes attached. |
-| Usability testing and application tracking | Pending. |
-| High-fidelity interface proposal | Pending. |
+| Flow and prototype design | In progress by Designer (Cristián). Navigation flowchart and paper low-fi sketches underway. |
+| Usability testing and application tracking | Scheduled for Milestone 2. |
+| High-fidelity interface proposal | In progress by Designer (Cristián). Figma HD prototype and printouts underway. |
 
-The next steps are to adjust the canvas to the feedback loop, contrast the journey with real cases, and design a prototype that makes it possible to check the relation between comment, correction and later submission.
+The UX analysis and research deliverables for Milestone 1 are complete. The next step is for the designer (Cristián) to finalize the paper low-fi prototypes, navigation flowchart, and Figma HD screens based on the UI specifications established above.
 
 ## Repository contents
 
@@ -204,7 +247,9 @@ The next steps are to adjust the canvas to the feedback loop, contrast the journ
 │   ├── value-proposition-canvas.pdf
 │   ├── benchmarking-report.pdf
 │   ├── benchmarking.pdf
-│   └── customer-journey-map.pdf
+│   ├── Customer-Journey-Map.pdf
+│   ├── scope-and-ux-elements.pdf
+│   └── scope-and-ux-elements.md
 ├── ux-personas/
 │   ├── 1.png
 │   ├── 2.png
