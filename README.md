@@ -65,22 +65,20 @@ The profiles are written in English and share a structure of personal informatio
 
 ### 2. Value Proposition Canvas
 
-The canvas relates the student's jobs, frustrations and expected gains to the features and mechanisms proposed to make feedback easier to use.
+The Value Proposition Canvas aligns user needs with the system's core capabilities. While the initial exploratory canvas focused solely on a generic student segment, the calibrated canvas explicitly accounts for **all three validated UX Personas (Valentina, Samon, and Martina)**, closing the loop from both the student remediation and the instructor verification perspectives.
+
+* **Calibrated Canvas (3 Personas):** [View the Calibrated Value Proposition Canvas & Strategy Brief PDF](docs/value-proposition-canvas-full.pdf).
+* **Initial Exploratory Board:** [View the original Student Canvas PDF](docs/value-proposition-canvas.pdf).
 
 ![Value Proposition Canvas of the assessment feedback project](images/value_proposition.png)
 
-[View the original canvas PDF](docs/value-proposition-canvas.pdf).
+| Persona / Role | Addressed Customer Jobs | Pains Relieved | Gains Created | Core UI Capability |
+| :--- | :--- | :--- | :--- | :--- |
+| **Valentina Rojas**<br>*(Primary Learner)* | Identify exact rubric failure and execute verifiable corrections for subsequent submission. | Eliminates abstract comments ("elaborate more") and fear of uncredited fixes. | Transparency in criteria and certainty that evidence is linked to critique. | **Prescriptive Action Cards + Evidence-Binding Module** |
+| **Samon Baker**<br>*(Primary Prioritizer)* | Triage revision tasks against tight deadlines and track design version adjustments. | Resolves unranked feedback overload and lost context between prototype versions. | Prioritized task list ranked by rubric weight; clear version labeling. | **Urgency / Rubric Weight Sorting + Version Tagging** |
+| **Martina Soto**<br>*(Secondary Evaluator)* | Formulate actionable feedback and verify student compliance without manual re-reading. | Eliminates 20+ hours of manual side-by-side document comparison and empty checkbox claims. | Rapid, auditable verification of corrections in a single comparative view. | **Instructor Verification Queue + 1-Click Status Approval** |
 
-| Component | Content of the current canvas |
-| --- | --- |
-| Student jobs | Organize the academic schedule, know the evaluation criteria, understand previous errors and carry out corrective actions in later submissions. |
-| Pains | Fragmented information, unawareness of evaluation parameters, late feedback and ambiguous comments. |
-| Gains | Clarity on improvement steps, evidence of progress, centralized information and transparent evaluation. |
-| Products and services | Academic dashboard, rubrics module, progress panel and links between failed criteria and corrective actions. |
-| Pain relievers | Turn abstract comments into actionable guidance, show the rubric in advance and bring academic information together. |
-| Gain creators | Support self-evaluation, focus study time and show the student's progress. |
-
-The link between criterion and corrective action answers the problem directly. For the next iteration, the proposal is to prioritize it together with evidence of application and comparison by criterion. The schedule, timetables and centralization of all academic information are complementary features that need to justify their contribution to the main goal.
+> **Scope Note:** Auxiliary functions such as general campus timetables, exam calendars, and institutional gradebooks shown in early exploratory mockups are strictly excluded from the design scope to preserve functional focus and comply with course requirements.
 
 ### 3. Benchmarking
 
@@ -183,7 +181,7 @@ The proposal is to test the prototype with engineering and design students who h
 | --- | --- |
 | Initial definition of the problem and the user story | Available. |
 | UX personas | Three validated empirical profiles grounded in qualitative fieldwork interviews. |
-| Value Proposition Canvas | Available. Scope needs prioritization. |
+| Value Proposition Canvas | Completed. Calibrated for all three personas (Valentina, Samon, Martina) and focused on feedback loop without auxiliary clutter (docs/value-proposition-canvas-full.pdf). |
 | Benchmarking | Completed. Full 9-page benchmark including exploration protocol, annotated teardowns, comparison matrix, ERIC matrix, and concept map (docs/benchmarking-report.pdf). |
 | Customer Journey Map | Available. General journey based on the personas, validation pending. |
 | Research with students and instructors | Completed. Semi-structured interviews conducted with students and instructors; evidence attached in docs. |
@@ -202,6 +200,7 @@ The next steps are to adjust the canvas to the feedback loop, contrast the journ
 │   ├── project-brief.md
 │   ├── user-research-interviews.pdf
 │   ├── user-personas.pdf
+│   ├── value-proposition-canvas-full.pdf
 │   ├── value-proposition-canvas.pdf
 │   ├── benchmarking-report.pdf
 │   ├── benchmarking.pdf
