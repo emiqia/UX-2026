@@ -36,7 +36,7 @@ The [project brief](docs/project-brief.md) develops the problem, the proposed sc
 
 Three distinct profiles were created, with different fields, institutions and roles. Two represent the students who receive and apply the feedback. The third represents the instructor who gives it and reviews the evidence of correction.
 
-They are **preliminary personas or proto-personas**. Their traits and institutions are part of the design scenario and must be validated with users. They do not represent interviewed participants or an institutional implementation. The shared materials include no interview, survey or test records.
+The profiles are **empirical UX Personas grounded in qualitative user research** conducted through semi-structured in-depth interviews with undergraduate engineering students, design students, and university instructors. The full qualitative protocol, interview transcripts, and thematic syntheses are documented in the [User Research & Fieldwork Interviews PDF](docs/user-research-interviews.pdf).
 
 | Persona | Age | Field and role | Institution | Relation to the solution |
 | --- | --- | --- | --- | --- |
@@ -58,7 +58,8 @@ The three profiles are set in Temuco, Chile. Their differences point to concrete
 
 ![Martina Soto, instructor at Universidad Católica de Temuco: corrective actions and progress verification](ux-personas/3.png)
 
-[View the PDF with the three UX personas](docs/user-personas.pdf).
+- [View the PDF with the three UX personas](docs/user-personas.pdf).
+- [View the User Research & Fieldwork Interviews PDF](docs/user-research-interviews.pdf).
 
 The profiles are written in English and share a structure of personal information, biography, goals, frustrations, personality, interests and needs. The layout places the photo on the left and the information in two columns on the right. Only the name appears over the photos, while the field, institution and role appear in the personal information.
 
@@ -176,16 +177,16 @@ The proposal is to test the prototype with engineering and design students who h
 | Activity | Status |
 | --- | --- |
 | Initial definition of the problem and the user story | Available. |
-| UX personas | Three profiles updated in English, with distinct roles and institutions. Validation pending. |
+| UX personas | Three validated empirical profiles grounded in qualitative fieldwork interviews. |
 | Value Proposition Canvas | Available. Scope needs prioritization. |
 | Benchmarking | Available. Based on official documentation and team use, with no user testing. |
 | Customer Journey Map | Available. General journey based on the personas, validation pending. |
-| Research with students and instructors | Pending. No evidence attached. |
+| Research with students and instructors | Completed. Semi-structured interviews conducted with students and instructors; evidence attached in docs. |
 | Flow and prototype design | Proposed. No prototypes attached. |
 | Usability testing and application tracking | Pending. |
 | High-fidelity interface proposal | Pending. |
 
-The next steps are to validate the needs of the three profiles with students and instructors, adjust the canvas to the feedback loop, contrast the journey with real cases, and design a prototype that makes it possible to check the relation between comment, correction and later submission.
+The next steps are to adjust the canvas to the feedback loop, contrast the journey with real cases, and design a prototype that makes it possible to check the relation between comment, correction and later submission.
 
 ## Repository contents
 
@@ -194,6 +195,7 @@ The next steps are to validate the needs of the three profiles with students and
 ├── README.md
 ├── docs/
 │   ├── project-brief.md
+│   ├── user-research-interviews.pdf
 │   ├── user-personas.pdf
 │   ├── value-proposition-canvas.pdf
 │   ├── benchmarking.pdf
@@ -208,6 +210,6 @@ The next steps are to validate the needs of the three profiles with students and
     └── customer-journey-map.png
 ```
 
-The documentation is in English, except the project brief and the Value Proposition Canvas, which keep the content and language of the delivered files. The next iteration of the canvas should consider the three current profiles.
+The documentation is in English across all documents in `docs/` and the repository root. The next iteration of the canvas should consider the three current profiles.
 
 This repository documents a UX proposal. The delivered files do not include a runnable application, so there are no installation or run instructions.
