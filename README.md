@@ -10,7 +10,7 @@ Documentation repository for the UX project of **Group 5** (HCI / UXD 2026-2, In
 
 | Member | Role |
 | --- | --- |
-| Emilia Toro | Project Lead (*Jefe*) |
+| Emilia Toro | Project Lead |
 | Cristian Sandoval | Designer |
 | Bastian Wenckhans | Analyst |
 
