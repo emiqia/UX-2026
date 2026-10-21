@@ -2,237 +2,254 @@
 
 *Feedback on assessments that students actually use*
 
-Documentation repository for the UX project of **group 5**. The project aims to turn the feedback on an assessment into a concrete correction in the next submission, and to let students check their progress by rubric criterion.
+Documentation repository for the UX project of **Group 5** (HCI / UXD 2026-2, Initiative 03). **Redo** is a mobile app that gathers, in one place, the calendar of assessments, the rubrics and corrected tests, and the student's progress, so that feedback is something students read, question and use to prepare their next assessment.
+
+**High-fidelity prototype (Figma):** [Redo – HD screens](https://www.figma.com/design/cwB8ZiCmUKTIgNYHercjWv)
 
 ## Team
 
-| Member |
-| --- |
-| Cristian Sandova |
-| Emilia Toro |
-| Bastian Wenckhans |
+| Member | Role |
+| --- | --- |
+| Emilia Toro | Project Lead (*Jefe*) |
+| Cristian Sandoval | Designer |
+| Bastian Wenckhans | Analyst |
 
 ## Selected project
 
-Feedback on assignments and rubrics arrives late and scattered across PDF comments, spreadsheets and emails. This makes it hard for students to understand what failed and to apply the comments before their next submission.
+Feedback on assessments usually reaches students as a final grade, plus comments scattered across PDF files, spreadsheets and emails. Rubrics are published late or not at all, students cannot tell which criteria or questions cost them points, they do not know how their result compares with the course, and when they disagree with a correction they have no clear and respectful way to ask.
 
-The challenge is to **close the feedback loop**: identify the criterion that failed, understand which concrete action corrects it, and check whether there was an improvement over the previous submission. The functional surface is small, and the design focus is on the clarity of the information and on evidence that the feedback was used.
+The challenge is to **make feedback usable**: before an assessment, the student can see the rubric and prepare; after it, the student can see exactly where points were lost and why, can place the result in context, and can send the teacher a precise query about a specific criterion or question.
 
 ### Main user story
 
-> As a student who got a low grade on the first submission, I need to see exactly which criterion failed and what I should do differently next time, so that I do not repeat the same mistake without noticing.
+> As a student who received a low grade, I need to see exactly which criterion or question cost me points, and why, so that I can prepare better for the next assessment and ask my teacher about any correction I do not understand.
 
 ### Design goal
 
-Design an experience that connects **evaluated criterion → detected difficulty → improvement action → evidence of application → result of the next submission**.
+Design an experience that connects **upcoming assessment → published rubric → corrected result → context (course average, highest, lowest) → progress over time → structured query to the teacher**, with a matching teacher side that publishes rubrics and tests, reviews them with correct answers and a final comment, and answers student queries.
 
-The value proposition is to help students turn the comments of an assessment into understandable and verifiable actions for their next piece of work.
+The [project brief](docs/project-brief.md) develops the problem, the research findings, the scope and the questions to validate.
 
-The [project brief](docs/project-brief.md) develops the problem, the proposed scope and the questions to validate with users.
+## High-fidelity screens
+
+The prototype has **15 screens** (390 × 844 px, mobile), one design system (Plus Jakarta Sans; cobalt blue, warm off-white, ink, yellow and coral accents) and a clickable prototype. The interface is in Spanish; the documentation is in English. Open any screen directly in Figma:
+
+| ID | Screen (Figma name) | Actor | Purpose |
+| :-: | :--- | :--- | :--- |
+| HD-01 | [Bienvenida](https://www.figma.com/design/cwB8ZiCmUKTIgNYHercjWv?node-id=30-636) | All | Welcome and entry to the app. |
+| HD-02 | [Iniciar sesión](https://www.figma.com/design/cwB8ZiCmUKTIgNYHercjWv?node-id=30-652) | All | Sign in with the institutional account. |
+| HD-03 | [Elegir perfil](https://www.figma.com/design/cwB8ZiCmUKTIgNYHercjWv?node-id=30-686) | All | Choose the student or the teacher profile. |
+| HD-04 | [Inicio](https://www.figma.com/design/cwB8ZiCmUKTIgNYHercjWv?node-id=24-661) | Student | Next assessments and latest results. |
+| HD-05 | [Evaluaciones (calendario)](https://www.figma.com/design/cwB8ZiCmUKTIgNYHercjWv?node-id=24-787) | Student | Monthly calendar of assessments, with state per day. |
+| HD-06 | [Detalle (rúbrica)](https://www.figma.com/design/cwB8ZiCmUKTIgNYHercjWv?node-id=24-1010) | Student | Grade, total achievement, course average and criterion-by-criterion points. |
+| HD-07 | [Detalle (prueba)](https://www.figma.com/design/cwB8ZiCmUKTIgNYHercjWv?node-id=25-292) | Student | Incorrect questions with the correct answer and the teacher's final comment. |
+| HD-08 | [Próxima evaluación](https://www.figma.com/design/cwB8ZiCmUKTIgNYHercjWv?node-id=25-405) | Student | Published rubric of an upcoming assessment, to prepare. |
+| HD-09 | [Consultar una corrección](https://www.figma.com/design/cwB8ZiCmUKTIgNYHercjWv?node-id=25-542) | Student | Structured message to the teacher, anchored to a criterion or question. |
+| HD-10 | [Mi avance](https://www.figma.com/design/cwB8ZiCmUKTIgNYHercjWv?node-id=26-414) | Student | Own grades vs. course average, highest and lowest; chart; biggest error. |
+| HD-11 | [Perfil](https://www.figma.com/design/cwB8ZiCmUKTIgNYHercjWv?node-id=26-614) | Student | Student data, courses of the semester, switch to teacher profile. |
+| HD-12 | [Docente: agenda](https://www.figma.com/design/cwB8ZiCmUKTIgNYHercjWv?node-id=27-498) | Teacher | Schedule of assessments and pending queries. |
+| HD-13 | [Nueva evaluación y rúbrica](https://www.figma.com/design/cwB8ZiCmUKTIgNYHercjWv?node-id=27-618) | Teacher | Schedule an assessment; publish a rubric (criteria and weights, or file) or a test. |
+| HD-14 | [Revisión de prueba](https://www.figma.com/design/cwB8ZiCmUKTIgNYHercjWv?node-id=27-705) | Teacher | Review a test with a correct-answers sheet and a final comment. |
+| HD-15 | [Consulta de un estudiante](https://www.figma.com/design/cwB8ZiCmUKTIgNYHercjWv?node-id=27-838) | Teacher | Answer a student's query; the score can be adjusted once. |
+
+The student navigates with a four-tab bar (Inicio, Evaluaciones, Progreso, Perfil) and the teacher with a three-tab bar (Agenda, Mensajes, Perfil).
+
+### Navigation flow
+
+![Navigation flow of the Redo screens](images/navigation-flow.png)
+
+The same flow as an interactive diagram (rendered by GitHub):
+
+```mermaid
+flowchart TD
+    A["HD-01 Bienvenida"] --> B["HD-02 Iniciar sesión"]
+    B --> C{"HD-03 Elegir perfil"}
+    C -->|Student| D["HD-04 Inicio"]
+    C -->|Teacher| M["HD-12 Docente: agenda"]
+    D --> E["HD-05 Evaluaciones (calendario)"]
+    D --> J["HD-10 Mi avance"]
+    D --> K["HD-11 Perfil"]
+    E --> F["HD-06 Detalle (rúbrica)"]
+    E --> G["HD-07 Detalle (prueba)"]
+    E --> H["HD-08 Próxima evaluación"]
+    F --> I["HD-09 Consultar una corrección"]
+    G --> I
+    J --> F
+    K -->|Cambiar a perfil docente| M
+    M --> N["HD-13 Nueva evaluación y rúbrica"]
+    M --> O["HD-14 Revisión de prueba"]
+    M --> P["HD-15 Consulta de un estudiante"]
+    I -.->|query reaches the teacher| P
+    N -.->|rubric becomes visible| H
+    O -.->|corrected test becomes visible| G
+```
 
 ## UX Elements Architecture (Jesse James Garrett)
 
-To ensure academic and methodological rigor, each UX Research and design technique in the project is anchored to one of the five planes of Jesse James Garrett's *The Elements of User Experience*:
+Each UX Research and design technique in the project is anchored to one of the five planes of Jesse James Garrett's *The Elements of User Experience*:
 
-| UX Element Plane | Research & Design Techniques | Associated Project Deliverables | Grounding & Objectives |
+| Plane | Techniques | Deliverables | Objective |
 | :--- | :--- | :--- | :--- |
-| **1. Strategy** *(Estrategia)* | Semi-structured interviews ($N=3$), qualitative thematic analysis, Persona modeling, Value Proposition Canvas. | [Research Report](docs/user-research-interviews.pdf), [UX Personas](docs/user-personas.pdf), [Value Canvas](docs/value-proposition-canvas-full.pdf), [Brief](docs/project-brief.md) | Identifies breakdowns in feedback comprehension and establishes core value proposition: closing the loop with evidence. |
-| **2. Scope** *(Alcance)* | Competitive & analogous benchmarking, ERIC matrix, requirements prioritization, boundary definition. | [Benchmarking Report](docs/benchmarking-report.pdf), [Scope & UX Elements](docs/scope-and-ux-elements.pdf) | Constrains solution to 1 core flow and 2 secondary flows; establishes explicit justification for out-of-scope features. |
-| **3. Structure** *(Estructura)* | Customer Journey Mapping, navigation flow diagrams, information architecture. | [Customer Journey Map](docs/Customer-Journey-Map.pdf), Navigation Flow Diagram, CJM-Interface Mapping | Structures transitions from receiving feedback to submitting evidence; binds journey stages to interface IDs (UI-01 to UI-07). |
-| **4. Skeleton** *(Esqueleto)* | Paper Low-Fi sketching, interface evolution tracking, wireframing. | Low-Fi Paper Sketches, UI Evolution Log | Determines screen layout, hierarchy, and physical interaction controls (designed by Cristián). |
-| **5. Surface** *(Superficie)* | High-Definition UI prototyping, design system, accessibility audit. | Figma HD Prototype, Classroom Printouts | Final sensory presentation in Spanish with accessible color tokens and consistent typography. |
+| **1. Strategy** *(Estrategia)* | Semi-structured interviews (3 participants), thematic analysis, personas, Value Proposition Canvas. | [Research report](docs/user-research-interviews.pdf), [UX personas](docs/user-personas.pdf), [Value Proposition Canvas](docs/value-proposition-canvas-full.pdf), [Project brief](docs/project-brief.md) | Understand how feedback is received and used today, and define the value Redo offers. |
+| **2. Scope** *(Alcance)* | Competitive and analogous benchmarking, ERIC matrix, definition of flows and boundaries. | [Benchmarking report](docs/benchmarking-report.pdf), [Scope & UX elements](docs/scope-and-ux-elements.pdf) | Bound the solution to one core flow and two secondary flows, with a justification of what stays out. |
+| **3. Structure** *(Estructura)* | Customer Journey Map, navigation flow, information architecture. | [Customer Journey Map](docs/Customer-Journey-Map.pdf), navigation flow (above), journey-to-screen mapping | Organize how the student moves from knowing an assessment is coming to tracking progress. |
+| **4. Skeleton** *(Esqueleto)* | Paper low-fi sketches, wireframes. | Digitized low-fi sketches *(to be added by the team)* | Define layout, hierarchy and controls of each screen. |
+| **5. Surface** *(Superficie)* | HD prototype, design system, visual identity. | [Figma HD prototype](https://www.figma.com/design/cwB8ZiCmUKTIgNYHercjWv) | Final look in Spanish: typography, color tokens, components and the Redo logo. |
 
-*Detailed Document:* [View the Scope Delimitation, UX Elements & CJM Mapping PDF](docs/scope-and-ux-elements.pdf).
+*Detailed document:* [Scope delimitation, UX elements and journey-to-screen mapping](docs/scope-and-ux-elements.pdf).
 
 ## Completed activities
 
-### 1. UX personas
+### 1. User research and UX personas
 
-Three distinct profiles were created, with different fields, institutions and roles. Two represent the students who receive and apply the feedback. The third represents the instructor who gives it and reviews the evidence of correction.
+Three semi-structured interviews (two students and one teacher, 30–40 minutes each, with informed consent) were run in October 2026 and analysed thematically. The protocol, guide, participant summaries and findings are in the [User Research report](docs/user-research-interviews.pdf), and the findings are summarized in the [project brief](docs/project-brief.md). They gave rise to three personas:
 
-The profiles are **empirical UX Personas grounded in qualitative user research** conducted through semi-structured in-depth interviews with undergraduate engineering students, design students, and university instructors. The full qualitative protocol, interview transcripts, and thematic syntheses are documented in the [User Research & Fieldwork Interviews PDF](docs/user-research-interviews.pdf).
-
-| Persona | Age | Field and role | Institution | Relation to the solution |
+| Persona | Age | Field and role | Institution | Relation to Redo |
 | --- | --- | --- | --- | --- |
-| Valentina Rojas | 20 | Computer engineering student, primary user. | Universidad de La Frontera | Identifies the failed criterion, follows a corrective action and compares her result in the next submission. |
-| Samon Baker | 21 | Graphic design student and intern, primary user. | INACAP | Gathers comments by project, prioritizes revisions and links each action to evidence of the change in his design. |
-| Martina Soto | 29 | University instructor in education, secondary user. | Universidad Católica de Temuco | Relates comments to criteria and actions, reviews the evidence of correction and compares results across submissions. |
+| Valentina Rojas | 20 | Computer engineering student, primary user. | Universidad de La Frontera | Checks her calendar, opens the rubric or corrected test to see where she lost points, and follows her progress. |
+| Samon Baker | 21 | Graphic design student and intern, primary user. | INACAP | Prepares for assessments with the published rubric and compares his results with the course. |
+| Martina Soto | 29 | University instructor in education, secondary user. | Universidad Católica de Temuco | Schedules assessments, publishes rubrics and tests, reviews them and answers student queries. |
 
-The three profiles are set in Temuco, Chile. Their differences point to concrete interaction needs: clarity for Valentina, prioritization for Samon and follow-up on application for Martina.
+The three profiles are set in Temuco, Chile. The prototype is set in a single institutional environment (UFRO) to validate the interaction mechanics; the differences between personas inform needs, not institutional integration.
 
 #### Valentina Rojas
 
-![Valentina Rojas, computer engineering student at Universidad de La Frontera: understanding and applying feedback](ux-personas/1.png)
+![Valentina Rojas, computer engineering student at Universidad de La Frontera](ux-personas/1.png)
 
 #### Samon Baker
 
-![Samon Baker, graphic design student at INACAP and intern: prioritizing revisions and evidence of changes](ux-personas/2.png)
+![Samon Baker, graphic design student at INACAP and intern](ux-personas/2.png)
 
 #### Martina Soto
 
-![Martina Soto, instructor at Universidad Católica de Temuco: corrective actions and progress verification](ux-personas/3.png)
+![Martina Soto, instructor at Universidad Católica de Temuco](ux-personas/3.png)
 
 - [View the PDF with the three UX personas](docs/user-personas.pdf).
-- [View the User Research & Fieldwork Interviews PDF](docs/user-research-interviews.pdf).
-
-The profiles are written in English and share a structure of personal information, biography, goals, frustrations, personality, interests and needs. The layout places the photo on the left and the information in two columns on the right. Only the name appears over the photos, while the field, institution and role appear in the personal information.
 
 ### 2. Value Proposition Canvas
 
-The Value Proposition Canvas aligns user needs with the system's core capabilities. While the initial exploratory canvas focused solely on a generic student segment, the calibrated canvas explicitly accounts for **all three validated UX Personas (Valentina, Samon, and Martina)**, closing the loop from both the student remediation and the instructor verification perspectives.
+The canvas aligns the needs of the three personas with what Redo offers. Initial exploratory board: [original canvas](docs/value-proposition-canvas.pdf). Calibrated canvas: [Value Proposition Canvas and strategy brief](docs/value-proposition-canvas-full.pdf).
 
-* **Calibrated Canvas (3 Personas):** [View the Calibrated Value Proposition Canvas & Strategy Brief PDF](docs/value-proposition-canvas-full.pdf).
-* **Initial Exploratory Board:** [View the original Student Canvas PDF](docs/value-proposition-canvas.pdf).
+![Value Proposition Canvas of Redo](images/value_proposition.png)
 
-![Value Proposition Canvas of the assessment feedback project](images/value_proposition.png)
-
-| Persona / Role | Addressed Customer Jobs | Pains Relieved | Gains Created | Core UI Capability |
+| Persona | Customer jobs | Pains relieved | Gains created | Redo capability (screens) |
 | :--- | :--- | :--- | :--- | :--- |
-| **Valentina Rojas**<br>*(Primary Learner)* | Identify exact rubric failure and execute verifiable corrections for subsequent submission. | Eliminates abstract comments ("elaborate more") and fear of uncredited fixes. | Transparency in criteria and certainty that evidence is linked to critique. | **Prescriptive Action Cards + Evidence-Binding Module** |
-| **Samon Baker**<br>*(Primary Prioritizer)* | Triage revision tasks against tight deadlines and track design version adjustments. | Resolves unranked feedback overload and lost context between prototype versions. | Prioritized task list ranked by rubric weight; clear version labeling. | **Urgency / Rubric Weight Sorting + Version Tagging** |
-| **Martina Soto**<br>*(Secondary Evaluator)* | Formulate actionable feedback and verify student compliance without manual re-reading. | Eliminates 20+ hours of manual side-by-side document comparison and empty checkbox claims. | Rapid, auditable verification of corrections in a single comparative view. | **Instructor Verification Queue + 1-Click Status Approval** |
-
-> **Scope Note:** Auxiliary functions such as general campus timetables, exam calendars, and institutional gradebooks shown in early exploratory mockups are strictly excluded from the design scope to preserve functional focus and comply with course requirements.
+| **Valentina Rojas** *(primary)* | Understand where she lost points and ask about a correction she does not understand. | Receiving only a number; generic comments; not knowing how to ask without confrontation. | Seeing points per criterion and the correct answer; asking with a message anchored to that criterion. | Rubric and test detail, query (HD-06, HD-07, HD-09) |
+| **Samon Baker** *(primary)* | Prepare for upcoming assessments and see whether he is improving. | Learning the rubric after the assessment; no sense of where he stands. | Published rubric in advance; comparison with course average, highest and lowest; biggest error. | Calendar, next assessment, progress (HD-05, HD-08, HD-10) |
+| **Martina Soto** *(secondary)* | Publish rubrics and tests, give useful feedback and answer queries efficiently. | Repeated questions by email; rubrics scattered across files; unstructured queries. | One place to schedule, publish, review and answer, with the score adjustable once. | Teacher agenda, publish, review, answer (HD-12 to HD-15) |
 
 ### 3. Benchmarking
 
-A comprehensive exploratory and competitive UX benchmark adapted from the *Fructus Iter* methodology, designed to evaluate how educational and collaborative platforms manage the feedback-to-remediation loop.
+Exploratory and competitive benchmark of how educational and collaborative tools present assessments, rubrics and results. It includes an exploration protocol, annotated teardowns of each tool, a comparison matrix, an ERIC matrix (Eliminate, Reduce, Raise, Create) and an idea map that connects the patterns found to Redo's modules.
 
-The benchmark integrates four methodological components demanded by the course rubric:
-1. **Initial Exploration Protocol (*Pauta de Exploración*):** Standardized protocol evaluating 4 user tasks under Valentina's shared scenario (receiving 1/4 on a rubric criterion, formulating actions, binding evidence, and instructor verification).
-2. **Annotated Interface Teardowns (*Capturas Anotadas*):** Detailed teardowns with positive `[+]` and negative `[-]` callouts analyzing direct competitors (Moodle, Canvas LMS, Google Classroom) and collaborative tools (Trello, GitHub PRs, Figma).
-3. **Synthetic Comparison & ERIC Matrix:** Qualitative comparison of feature support alongside an Opportunity Matrix (*Eliminate, Reduce, Raise, Create*).
-4. **Ideation & Concept Map (*Mapa de Ideas*):** Architectural diagram connecting competitor patterns to LoopFeedback's 4 core modules (*Interactive Rubric Breakdown*, *Prescriptive Action Cards*, *Evidence-Binding Module*, and *Instructor Verification Queue*).
-
-* **Full Report:** [View the Comprehensive 9-page UX Benchmarking Report PDF](docs/benchmarking-report.pdf).
-* **Synthesis Board:** [View the original Benchmarking Board PDF](docs/Benchmarking.pdf).
+* **Full report:** [Benchmarking report](docs/benchmarking-report.pdf).
+* **Synthesis board:** [Benchmarking board](docs/Benchmarking.pdf).
 
 ![Benchmarking of feedback tools for students](images/benchmarking.png)
 
-| Tool | Category | Key Finding & Contribution to Design |
+| Tool | Category | Key finding and contribution to the design |
 | --- | --- | --- |
-| Moodle (Campus Virtual UFRO) | Direct Competitor | Clear rubric level highlighting, but comments are trapped inside small cells and resubmissions overwrite past history. |
-| Canvas LMS | Direct Competitor | Criterion-level remarks via SpeedGrader, but lacks student-driven evidence binding and cross-submission comparison. |
-| Google Classroom | Direct Competitor | Clean expandable score chips, but private feedback is separated from specific rubric criteria. |
-| Trello | Analogous Reference | Strong mental model for checkable action cards and file attachments; adopted for our prescriptive action cards. |
-| GitHub (Pull Requests) | Analogous Reference | Line-by-line granular critique and re-requesting review; inspires our bidirectional evidence binding. |
-| Figma (Comments) | Analogous Reference | In-situ pinned feedback and version comparison history. |
-| Intranet UFRO | Baseline Reference | Static grade display with no rubric or formative remediation mechanism. |
+| Moodle (Campus Virtual UFRO) | Direct competitor | Rubric levels are highlighted, but comments sit in small cells and there is no course context. |
+| Canvas LMS | Direct competitor | Criterion-level remarks and a grades view with course statistics; inspires the comparison in *Mi avance*. |
+| Google Classroom | Direct competitor | Clear assessment list and due dates; feedback is separate from specific criteria. |
+| Intranet UFRO | Baseline | Static grade display, no rubric and no way to ask about a grade. |
+| Google Calendar | Analogous reference | Monthly grid with day markers; inspires the assessments calendar (HD-05). |
+| Duolingo / Khan Academy | Analogous reference | Progress charts and review of wrong answers with the correct one; inspires HD-07 and HD-10. |
 
 ### 4. Customer Journey Map
 
-A single general journey, not one per persona, in six stages: receive the result, find the feedback, understand it, revise, submit and check progress. It includes scenario, expectations, actions, touchpoints, instructor actions, thoughts, emotional curve, pain points and opportunities. It starts from Valentina Rojas and Samon Baker as primary users and Martina Soto as the secondary user.
+A single general journey in six stages, from knowing that an assessment is coming to tracking progress: **Know, Prepare, Receive, Understand, Ask, Track**. It includes scenario, expectations, actions, touchpoints, teacher actions, thoughts, emotional curve, pain points and opportunities.
 
 ![Customer Journey Map of the project](images/customer-journey-map.png)
 
-* [View the Customer Journey Map PDF](docs/Customer-Journey-Map.pdf).
-* [View the CJM & Interfaces Architecture Document](docs/scope-and-ux-elements.pdf).
+* [Customer Journey Map PDF](docs/Customer-Journey-Map.pdf).
 
-#### Customer Journey Map to Interface Mapping
+#### Journey-to-screen mapping
 
-To ensure direct traceability between user fieldwork and interface screens, each CJM stage is formally bound to a specific interface designed by the team:
+| Stage | What the student does | Emotional state | Screens | Teacher counterpart |
+| :--- | :--- | :--- | :--- | :--- |
+| **01 Know** | Checks which assessments are coming and when. | Uncertain | HD-04, HD-05 | Schedules the assessment (HD-12, HD-13). |
+| **02 Prepare** | Reads the published rubric to know what will be evaluated. | Focused | HD-08 | Publishes criteria and weights, or a file (HD-13). |
+| **03 Receive** | Opens the result and sees grade, achievement and course average. | Anxious | HD-04, HD-06, HD-07 | Reviews the test and writes a final comment (HD-14). |
+| **04 Understand** | Sees points per criterion, or incorrect questions with the correct answer. | Reassured | HD-06, HD-07 | — |
+| **05 Ask** | Sends a structured message about a criterion or question. | Hopeful | HD-09 | Answers and may adjust the score once (HD-15). |
+| **06 Track** | Compares own grades with the course and finds the biggest error. | Encouraged | HD-10, HD-11 | — |
 
-| CJM Stage | User Action (Valentina / Samon) | Emotional State | Interface ID | Screen Name & Core Interaction |
-| :--- | :--- | :--- | :---: | :--- |
-| **01 Receive** | Opens assessment result on the platform. | Concerned / Anxious | **UI-01** | **Assessment Overview Dashboard:** Summary card displaying total grade, delivery date, and color-coded status badges for all criteria. |
-| **02 Find** | Locates rubric and identifies penalized criterion. | Reassured / Focused | **UI-02** | **Rubric Breakdown & Criterion Inspector:** Expandable rubric grid highlighting achieved level, points lost, and teacher comments. |
-| **03 Understand** | Reads explanation and identifies concrete fix. | Confident | **UI-03** | **Prescriptive Action Card Drawer:** Dedicated card displaying instructor-approved tasks, prescriptive examples, and success conditions. |
-| **04 Revise** | Updates deliverable and attaches revision evidence. | In control | **UI-04** | **Evidence-Binding Modal:** Upload/input modal where student anchors text snippets, screenshots, or URLs directly to the action card. |
-| **05 Submit** | Sends correction with linked proof for teacher review. | Hopeful | **UI-05** | **Submission Confirmation & Status Tracker:** Moves action status from `Pending` to `Evidence Submitted`, awaiting instructor review. |
-| **06 Compare** | Reviews subsequent submission to verify improvement. | Encouraged | **UI-06** | **Longitudinal Criterion Comparison View:** Side-by-side historical comparison of the same criterion between Deliverable 1 and 2. |
-| *Evaluator Flow* | Reviews student evidence and validates correction. | Relieved / Efficient | **UI-07** | **Instructor Verification Queue:** Split inspection view allowing 1-click approval or re-prompting without manual document search. |
+## Delimitation of Scope
 
-## Delimitation of Scope (Delimitación del Alcance)
+The scope is **everything built in the 15 HD screens**, organized in one core flow and two secondary flows, plus supporting screens.
 
-In strict accordance with the project guidelines, functional exhaustiveness is avoided. The proposal is formally bounded to **one core flow** and **two secondary flows**, with an explicit written justification of capabilities left out of scope to avoid penalization.
+### 1. Core flow: prepare and understand a result
+* **Actors:** student (Valentina, Samon) and teacher (Martina).
+* **Steps:**
+  1. The teacher schedules an assessment and publishes its rubric or test (HD-12, HD-13).
+  2. The student sees it on the calendar and reads the rubric to prepare (HD-05, HD-08).
+  3. After the assessment, the teacher reviews it with a correct-answers sheet and a final comment (HD-14).
+  4. The student opens the result and sees points per criterion, or incorrect questions with the correct answer, plus the course average (HD-06, HD-07).
 
-### 1. Core Flow (Flujo Principal): Feedback-to-Remediation Loop
-* **Actor:** Student (Valentina Rojas / Samon Baker).
-* **Sequential Interaction Steps:**
-  1. **Identify Weakness (`UI-01` & `UI-02`):** Student inspects returned deliverable and isolates a penalized criterion ($1/4$ points) along with the instructor's observation.
-  2. **Access Prescriptive Guidance (`UI-03`):** Student opens the associated Action Card to review the concrete, instructor-approved remediation guideline (*"What to do"*, *"Example"*, *"Success condition"*).
-  3. **Anchor & Submit Evidence (`UI-04` & `UI-05`):** Student uploads and binds proof of correction (revised paragraph, code link, or annotated design) and submits it, updating status from `Pending Revision` to `Evidence Submitted`.
+### 2. Secondary flow 1: query a correction
+* **Actors:** student and teacher.
+* **Steps:** the student sends a message anchored to a criterion or question (HD-09); the teacher answers and may adjust the score once (HD-15).
 
-### 2. Secondary Flow 1: Instructor Verification & Status Approval
-* **Actor:** Course Instructor / Evaluator (Martina Soto).
-* **Sequential Interaction Steps:**
-  1. **Review Verification Queue (`UI-07`):** Instructor opens pending student remediation submissions.
-  2. **Side-by-Side Inspection:** System displays the original rubric critique alongside the student's linked evidence.
-  3. **1-Click Status Update:** Instructor approves the correction or requests further clarification without reading entire 40-page reports.
+### 3. Secondary flow 2: follow progress
+* **Actor:** student.
+* **Steps:** the student reviews own grades against the course average, highest and lowest, a line chart and the biggest error (HD-10).
 
-### 3. Secondary Flow 2: Longitudinal Criterion Comparison
-* **Actor:** Student (Valentina/Samon) and Instructor (Martina).
-* **Sequential Interaction Steps:**
-  1. **Select Deliverables (`UI-06`):** User chooses comparable Milestone 1 and Milestone 2 submissions.
-  2. **Inspect Evolution:** System displays side-by-side performance on the same rubric criterion to verify measurable academic growth.
+### 4. Supporting screens
+Welcome, sign in, profile choice and student profile (HD-01 to HD-03, HD-11), with the switch to the teacher profile.
 
-### 4. Explicit Justification of Out-of-Scope Features (Qué queda fuera y por qué)
+### 5. Out of scope and why
 
-| Out-of-Scope Feature | Scope Decision | Pedagogical & UX Justification |
+| Feature | Decision | Justification |
 | :--- | :---: | :--- |
-| **General Academic Timetables & Class Schedules** | Excluded | The initiative focuses exclusively on the formative evaluation loop. Campus scheduling creates interface noise and deviates from the core usability problem. |
-| **Comprehensive Gradebook & Final GPA Calculator** | Excluded | Institutional platforms (UFRO Intranet) already calculate weighted averages. Duplicating gradebooks shifts focus away from criterion-level understanding. |
-| **Unstructured Chat / Direct Messaging Channel** | Excluded | Fieldwork revealed open messaging threads cause evaluator fatigue and scatter feedback. Communication must remain strictly anchored to Action Cards and Evidence Attachments. |
-| **Automated AI Grading / Generative Auto-Scoring** | Excluded | Course regulations mandate that Milestone 1 proves human UX design and research. AI grading is prohibited in Hito 1 (and will be explored under Human-in-the-Loop guidelines in Hito 2). |
-| **Multi-Institution Account Synchronization** | Excluded | The prototype assumes a single course environment ($1$ course, $2$ related deliverables) to validate interaction mechanics before tackling institutional API interoperability. |
-
-### Illustrative example
-
-This example explains the proposal. It is not a finding and does not come from a test.
-
-| Step | Example |
-| --- | --- |
-| Criterion | Justification of design decisions. |
-| Difficulty | The first submission presents a decision without linking it to user evidence. |
-| Concrete action | Add the evidence that supports the decision and explain how it relates to the user's problem. |
-| Evidence of application | Point to the section of the second submission where that justification was added. |
-| Check | Review the level reached on the same criterion in the second assessment. |
+| Evidence upload and corrective action cards | Excluded | Students only *view* feedback; the research showed the need is understanding and asking, not submitting more work. |
+| Integration with the UFRO intranet or Moodle | Excluded | The prototype uses its own data to validate the interaction before tackling institutional APIs. |
+| Free chat with the teacher | Excluded | Queries are structured and tied to a criterion or question, to avoid teacher overload and keep the context. |
+| Final-grade calculator and full gradebook | Excluded | Institutional systems already compute averages; Redo compares results, it does not replace the gradebook. |
+| Automated grading with AI | Excluded | The course prohibits it in this milestone. |
+| Multi-institution synchronization | Excluded | The prototype assumes one institutional environment. |
 
 ## Traceability of design decisions
 
-The following table links needs described in the materials to design proposals and ways to validate them. It does not represent research results.
-
-| Need or difficulty | Proposed response | Evidence to collect |
-| --- | --- | --- |
-| Not knowing which criterion failed | Present criterion, result and comment together. | The student correctly identifies the criterion and explains the difficulty. |
-| Not understanding what to correct | Show a specific action and a relevant example. | The student explains in their own words what they will change. |
-| Reviewing separate files and emails | Bring the feedback of the submission into one view. | They find the relevant comment without going through several sources. |
-| Repeating mistakes | Link improvement actions to evidence in the next submission. | A concrete change linked to the earlier comment is identified. |
-| Not recognizing progress | Compare the result of the same criterion across submissions. | They recognize whether performance improved, stayed the same or got worse. |
-| Little time to review design projects | Prioritize actions and gather comments by version. | The student finds a relevant action and points to the change made. |
-| Instructor difficulty verifying application | Link evidence in the next submission to each earlier comment. | The instructor identifies the correction and evaluates it against the same criterion. |
+| Need or difficulty | Design response | Screens | Evidence to collect |
+| --- | --- | :-: | --- |
+| Not knowing what will be evaluated | Rubric published before the assessment. | HD-08 | The student can say what will be evaluated. |
+| Receiving only a number | Points per criterion, or incorrect questions with the correct answer. | HD-06, HD-07 | The student identifies where points were lost. |
+| Not knowing where one stands | Course average, highest and lowest next to the result. | HD-06, HD-10 | The student places the result in the course. |
+| Repeating the same mistakes | Biggest error highlighted in *Mi avance*. | HD-10 | The student names what to improve. |
+| Not knowing how to question a correction | Structured message anchored to the criterion. | HD-09 | The student finds and uses the query. |
+| Teacher overloaded with scattered queries | One place to schedule, publish, review and answer. | HD-12 to HD-15 | The teacher answers a query without extra channels. |
 
 ## Proposed validation
 
-The proposal is to test the prototype with engineering and design students who have received feedback and must make a related later submission. Instructors would help review the clarity of the actions and the effort of verifying corrections. An initial test can ask participants to locate a weak criterion, explain the correction, record evidence and read the comparison across submissions.
+The prototype is to be tested with students who have recently received graded feedback and with teachers who publish rubrics. A first test asks participants to find the next assessment, read its rubric, locate where they lost points, send a query and read their progress.
 
 | Dimension | Proposed indicator |
 | --- | --- |
-| Understanding of the problem | Share of participants who correctly identify the criterion to improve. |
-| Clarity of the action | Share who describe a concrete correction consistent with the comment and the rubric. |
-| Ease of use | Time, errors and help needed to find and understand the feedback. |
-| Application | Share of actions with relevant evidence in the next submission. |
-| Progress | Change in level or score on the same criterion across comparable assessments. |
+| Understanding | Share of participants who correctly identify where they lost points. |
+| Ease of use | Time, errors and help needed to complete each task. |
+| Usefulness of preparation | Share who say the published rubric changes how they prepare. |
+| Queries | Share who can send a structured query and teachers who can answer it without extra channels. |
 
-**Opening a comment or marking a task as done does not show by itself that the feedback was applied.** Applying it requires evidence in the work. A better grade does not show by itself that the tool caused the improvement either. Numeric targets and test sizes will be defined when the research is prepared.
+Opening a comment does not show by itself that the feedback was used, and a better grade does not show by itself that the tool caused it. Numeric targets and sample sizes will be defined in Milestone 2.
 
 ## Status and next steps
 
 | Activity | Status |
 | --- | --- |
-| Initial definition of the problem and the user story | Available. |
-| UX Elements Architecture | Completed. 5 planes of Jesse James Garrett documented with techniques and deliverables (docs/scope-and-ux-elements.pdf). |
-| UX personas | Three validated empirical profiles grounded in qualitative fieldwork interviews. |
-| Value Proposition Canvas | Completed. Calibrated for all three personas (Valentina, Samon, Martina) and focused on feedback loop without auxiliary clutter (docs/value-proposition-canvas-full.pdf). |
-| Benchmarking | Completed. Full 9-page benchmark including exploration protocol, annotated teardowns, comparison matrix, ERIC matrix, and concept map (docs/benchmarking-report.pdf). |
-| Customer Journey Map & UI Mapping | Completed. 6 stages formally mapped to interface IDs UI-01 through UI-07 (docs/scope-and-ux-elements.pdf). |
-| Delimitation of Scope | Completed. 1 core flow, 2 secondary flows, and justified out-of-scope rationale table (docs/scope-and-ux-elements.pdf). |
-| Research with students and instructors | Completed. Semi-structured interviews conducted with students and instructors; evidence attached in docs. |
-| Flow and prototype design | In progress by Designer (Cristián). Navigation flowchart and paper low-fi sketches underway. |
-| Usability testing and application tracking | Scheduled for Milestone 2. |
-| High-fidelity interface proposal | In progress by Designer (Cristián). Figma HD prototype and printouts underway. |
+| Problem definition and user story | Completed. |
+| User research and personas | Completed. |
+| Value Proposition Canvas, benchmarking, Customer Journey Map | Completed. |
+| Scope and UX elements | Completed. |
+| High-fidelity prototype in Figma (15 screens) | Completed. |
+| Paper low-fi sketches (digitization) | Pending: to be added by the team. |
+| AI Usage Log | Pending: to be written by the team. |
+| Presentation | Pending: to be prepared by the team. |
+| Usability testing | Scheduled for Milestone 2. |
 
-The UX analysis and research deliverables for Milestone 1 are complete. The next step is for the designer (Cristián) to finalize the paper low-fi prototypes, navigation flowchart, and Figma HD screens based on the UI specifications established above.
+## AI Usage Log
+
+*To be completed by the team.*
 
 ## Repository contents
 
@@ -246,10 +263,9 @@ The UX analysis and research deliverables for Milestone 1 are complete. The next
 │   ├── value-proposition-canvas-full.pdf
 │   ├── value-proposition-canvas.pdf
 │   ├── benchmarking-report.pdf
-│   ├── benchmarking.pdf
+│   ├── Benchmarking.pdf
 │   ├── Customer-Journey-Map.pdf
-│   ├── scope-and-ux-elements.pdf
-│   └── scope-and-ux-elements.md
+│   └── scope-and-ux-elements.pdf
 ├── ux-personas/
 │   ├── 1.png
 │   ├── 2.png
@@ -257,9 +273,8 @@ The UX analysis and research deliverables for Milestone 1 are complete. The next
 └── images/
     ├── value_proposition.png
     ├── benchmarking.png
-    └── customer-journey-map.png
+    ├── customer-journey-map.png
+    └── navigation-flow.png
 ```
 
-The documentation is in English across all documents in `docs/` and the repository root. The next iteration of the canvas should consider the three current profiles.
-
-This repository documents a UX proposal. The delivered files do not include a runnable application, so there are no installation or run instructions.
+The documentation is in English; the app interface is in Spanish. This repository documents a UX proposal; it contains no runnable application, so there are no installation or run instructions.
